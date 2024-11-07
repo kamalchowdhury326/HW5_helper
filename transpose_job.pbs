@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -N MyGPUJob           
+#PBS -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb
+#PBS -l walltime=02:00:00  
+#PBS -q gpu          
+#PBS -j oe                  
+
+
+# Load necessary modules (e.g., CUDA, Python, etc.)
+module load cuda/11.7.0
+
+cd /home/ualmkc001/HW5
+
+
+# Print the job ID for verification
+echo "Running job with PBS_JOBID: $PBS_JOBID"
+
+
+
+nvcc transpose.cu -o transpose
+./transpose

@@ -1,0 +1,10 @@
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2231.58
+       shared memory copy             2198.46
+          naive transpose              427.26
+      coalesced transpose             1068.28
+  conflict-free transpose             2232.34

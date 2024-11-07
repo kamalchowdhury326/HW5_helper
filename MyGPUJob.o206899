@@ -1,0 +1,10 @@
+Running job with PBS_JOBID: 206899.asax-pbs1
+
+---------------------------
+__SUCCESS__
+---------------------------
+N                 = 1048576
+Threads Per Block = 256
+Blocks In Grid    = 4096
+---------------------------
+

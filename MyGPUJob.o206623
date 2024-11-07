@@ -1,0 +1,11 @@
+Running job with PBS_JOBID: 206623.asax-pbs1
+
+Device : NVIDIA H100 NVL
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy             2178.00
+       shared memory copy             2158.81
+          naive transpose              425.23
+      coalesced transpose             1056.99
+  conflict-free transpose             2183.44

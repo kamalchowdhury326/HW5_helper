@@ -1,0 +1,48 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: script1.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmkc001/HW5
+  The working directory is:  /scratch-local/ualmkc001.add.206577.asax-pbs1
+  The memory limit is: 1gb
+  The job will start running after: 202411062007.02
+  Job Name: add
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg006.asc.edu
+  Node list:  asaxg006.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu script1.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N add -a 202411062007.02 -r n -M mhchowdhury@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+ 
+Wed Nov  6 20:07:09 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:C1:00.0 Off |                    0 |
+| N/A   35C    P0             60W /  310W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Max error: 0
+======== Warning: This version of nvprof doesn't support the underlying device, GPU profiling skipped
+======== Warning: nvprof is not supported on devices with compute capability 8.0 and higher.
+                  Use NVIDIA Nsight Systems for GPU tracing and CPU sampling and NVIDIA Nsight Compute for GPU profiling.
+                  Refer https://developer.nvidia.com/tools-overview for more details.
+
