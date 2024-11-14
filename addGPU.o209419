@@ -1,0 +1,14 @@
+add_cuda.cu(4): warning #177-D: variable "TILE_DIM" was declared but never referenced
+
+
+----------------------------------
+add<<<1,1>>>  GPU time is taken=101.648354 ms
+Max error: 0
+
+----------------------------------
+add1<<<1,256>>>  GPU time is taken=1.637216 ms
+Max error: 1
+
+----------------------------------
+add2<<<4096,256>>>  GPU time is taken=0.955968 ms
+Max error: 2

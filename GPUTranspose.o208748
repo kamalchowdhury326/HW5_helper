@@ -1,0 +1,7 @@
+/var/spool/pbs/mom_priv/jobs/208748.asax-pbs1.SC: line 12: cd: /home/ualmkc001/HW5: No such file or directory
+Running job with PBS_JOBID: 208748.asax-pbs1
+gcc: error: transpose.cu: No such file or directory
+gcc: warning: ‘-x c++’ after last input file has no effect
+gcc: fatal error: no input files
+compilation terminated.
+/var/spool/pbs/mom_priv/jobs/208748.asax-pbs1.SC: line 21: ./transpose: No such file or directory

@@ -1,0 +1,20 @@
+
+----------------------------------
+add<<<1,1>>>  GPU time is taken=101.662819 ms
+Max error: 0
+
+----------------------------------
+add1<<<1,256>>>  GPU time is taken=1.663904 ms
+Max error: 1
+
+----------------------------------
+add2<<<4096,256>>>  GPU time is taken=1.006880 ms
+Max error: 2
+
+----------------------------------
+add3<<<4096,256>>> stride GPU time is taken=1.056416 ms
+Max error: 3
+
+----------------------------------
+add4<<<4096,256>>>  shared GPU time is taken=1.056416 ms
+Max error: 3

@@ -1,0 +1,4 @@
+add_cuda.cu(40): error: identifier "checkCuda" is undefined
+
+1 error detected in the compilation of "add_cuda.cu".
+Max error: 0

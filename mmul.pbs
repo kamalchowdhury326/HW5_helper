@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -N GPUTranspose          
+#PBS -N mmulGPU           
 #PBS -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb
 #PBS -l walltime=02:00:00  
 #PBS -q gpu          
@@ -12,10 +12,9 @@ module load cuda/11.7.0
 cd /home/ualmkc001/HW5_helper
 
 
-# Print the job ID for verification
-echo "Running job with PBS_JOBID: $PBS_JOBID"
+nvcc mmul.cu -o mmul
+./mmul
 
 
-
-nvcc transpose.cu -o transpose
-./transpose
+# nvcc vector_addition.cu -o vector_addition
+# ./vector_addition
