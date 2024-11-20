@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -N GPUTranspose          
+#PBS -N stencil1DGPU          
 #PBS -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb
 #PBS -l walltime=02:00:00  
 #PBS -q gpu          
@@ -19,7 +19,7 @@ echo "Running job with PBS_JOBID: $PBS_JOBID"
 
 
 
-nvcc transpose.cu -o transpose
-./transpose
+nvcc stencil1D.cu -o stencil1D
+./stencil1D
 
-nsys profile --stats=true ./transpose
+nsys profile --stats=true ./stencil1D

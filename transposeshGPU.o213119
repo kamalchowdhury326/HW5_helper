@@ -1,0 +1,144 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: transpose.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualmkc001/HW5_helper
+  The working directory is:  /scratch-local/ualmkc001.transposeshGPU.213119.asax-pbs1
+  The memory limit is: 1gb
+  The job will start running after: 202411191130.27
+  Job Name: transposeshGPU
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg002.asc.edu
+  Node list:  asaxg002.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu transpose.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N transposeshGPU -a 202411191130.27 -r n -M mhchowdhury@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+ 
+Tue Nov 19 13:13:00 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:41:00.0 Off |                    0 |
+| N/A   27C    P0             48W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+./transpose.sh: line 2: /opt/asn/etc/asn-bash-profiles-special/modules.sh: No such file or directory
+Warning: LBR backtrace method is not supported on this platform. DWARF backtrace method will be used.
+
+Device : NVIDIA A100-SXM4-40GB
+Matrix size: 1024 1024, Block size: 32 8, Tile size: 32 32
+dimGrid: 32 32 1. dimBlock: 32 8 1
+                  Routine         Bandwidth (GB/s)
+                     copy              948.42
+       shared memory copy              942.08
+          naive transpose              199.21
+      coalesced transpose              445.13
+  conflict-free transpose             1005.42
+Generating '/scratch-local/ualmkc001.transposeshGPU.213119.asax-pbs1/nsys-report-51f0.qdstrm'
+[1/8] [0%                          ] report1.nsys-rep[1/8] [0%                          ] report1.nsys-rep[1/8] [=15%                        ] report1.nsys-rep[1/8] [=16%                        ] report1.nsys-rep[1/8] [=17%                        ] report1.nsys-rep[1/8] [==18%                       ] report1.nsys-rep[1/8] [==19%                       ] report1.nsys-rep[1/8] [==20%                       ] report1.nsys-rep[1/8] [==21%                       ] report1.nsys-rep[1/8] [===22%                      ] report1.nsys-rep[1/8] [===24%                      ] report1.nsys-rep[1/8] [====28%                     ] report1.nsys-rep[1/8] [=====30%                    ] report1.nsys-rep[1/8] [=====31%                    ] report1.nsys-rep[1/8] [======34%                   ] report1.nsys-rep[1/8] [=======36%                  ] report1.nsys-rep[1/8] [========42%                 ] report1.nsys-rep[1/8] [=========44%                ] report1.nsys-rep[1/8] [=========46%                ] report1.nsys-rep[1/8] [==========47%               ] report1.nsys-rep[1/8] [==========48%               ] report1.nsys-rep[1/8] [===========50%              ] report1.nsys-rep[1/8] [===========51%              ] report1.nsys-rep[1/8] [============55%             ] report1.nsys-rep[1/8] [============56%             ] report1.nsys-rep[1/8] [========================100%] report1.nsys-rep[1/8] [========================100%] report1.nsys-rep
+[2/8] [0%                          ] report1.sqlite[2/8] [1%                          ] report1.sqlite[2/8] [2%                          ] report1.sqlite[2/8] [3%                          ] report1.sqlite[2/8] [4%                          ] report1.sqlite[2/8] [5%                          ] report1.sqlite[2/8] [6%                          ] report1.sqlite[2/8] [7%                          ] report1.sqlite[2/8] [8%                          ] report1.sqlite[2/8] [9%                          ] report1.sqlite[2/8] [10%                         ] report1.sqlite[2/8] [11%                         ] report1.sqlite[2/8] [12%                         ] report1.sqlite[2/8] [13%                         ] report1.sqlite[2/8] [14%                         ] report1.sqlite[2/8] [=15%                        ] report1.sqlite[2/8] [=16%                        ] report1.sqlite[2/8] [=17%                        ] report1.sqlite[2/8] [==18%                       ] report1.sqlite[2/8] [==19%                       ] report1.sqlite[2/8] [==20%                       ] report1.sqlite[2/8] [==21%                       ] report1.sqlite[2/8] [===22%                      ] report1.sqlite[2/8] [===23%                      ] report1.sqlite[2/8] [===24%                      ] report1.sqlite[2/8] [====25%                     ] report1.sqlite[2/8] [====26%                     ] report1.sqlite[2/8] [====27%                     ] report1.sqlite[2/8] [====28%                     ] report1.sqlite[2/8] [=====29%                    ] report1.sqlite[2/8] [=====30%                    ] report1.sqlite[2/8] [=====31%                    ] report1.sqlite[2/8] [=====32%                    ] report1.sqlite[2/8] [======33%                   ] report1.sqlite[2/8] [======34%                   ] report1.sqlite[2/8] [======35%                   ] report1.sqlite[2/8] [=======36%                  ] report1.sqlite[2/8] [=======37%                  ] report1.sqlite[2/8] [=======38%                  ] report1.sqlite[2/8] [=======39%                  ] report1.sqlite[2/8] [========40%                 ] report1.sqlite[2/8] [========41%                 ] report1.sqlite[2/8] [========42%                 ] report1.sqlite[2/8] [=========43%                ] report1.sqlite[2/8] [=========44%                ] report1.sqlite[2/8] [=========45%                ] report1.sqlite[2/8] [=========46%                ] report1.sqlite[2/8] [==========47%               ] report1.sqlite[2/8] [==========48%               ] report1.sqlite[2/8] [==========49%               ] report1.sqlite[2/8] [===========50%              ] report1.sqlite[2/8] [===========51%              ] report1.sqlite[2/8] [===========52%              ] report1.sqlite[2/8] [===========53%              ] report1.sqlite[2/8] [============54%             ] report1.sqlite[2/8] [============55%             ] report1.sqlite[2/8] [============56%             ] report1.sqlite[2/8] [============57%             ] report1.sqlite[2/8] [=============58%            ] report1.sqlite[2/8] [=============59%            ] report1.sqlite[2/8] [=============60%            ] report1.sqlite[2/8] [==============61%           ] report1.sqlite[2/8] [==============62%           ] report1.sqlite[2/8] [==============63%           ] report1.sqlite[2/8] [==============64%           ] report1.sqlite[2/8] [===============65%          ] report1.sqlite[2/8] [===============66%          ] report1.sqlite[2/8] [===============67%          ] report1.sqlite[2/8] [================68%         ] report1.sqlite[2/8] [================69%         ] report1.sqlite[2/8] [================70%         ] report1.sqlite[2/8] [================71%         ] report1.sqlite[2/8] [=================72%        ] report1.sqlite[2/8] [=================73%        ] report1.sqlite[2/8] [=================74%        ] report1.sqlite[2/8] [==================75%       ] report1.sqlite[2/8] [==================76%       ] report1.sqlite[2/8] [==================77%       ] report1.sqlite[2/8] [==================78%       ] report1.sqlite[2/8] [===================79%      ] report1.sqlite[2/8] [===================80%      ] report1.sqlite[2/8] [===================81%      ] report1.sqlite[2/8] [===================82%      ] report1.sqlite[2/8] [====================83%     ] report1.sqlite[2/8] [====================84%     ] report1.sqlite[2/8] [====================85%     ] report1.sqlite[2/8] [=====================86%    ] report1.sqlite[2/8] [=====================87%    ] report1.sqlite[2/8] [=====================88%    ] report1.sqlite[2/8] [=====================89%    ] report1.sqlite[2/8] [======================90%   ] report1.sqlite[2/8] [======================91%   ] report1.sqlite[2/8] [======================92%   ] report1.sqlite[2/8] [=======================93%  ] report1.sqlite[2/8] [=======================94%  ] report1.sqlite[2/8] [=======================95%  ] report1.sqlite[2/8] [=======================96%  ] report1.sqlite[2/8] [========================97% ] report1.sqlite[2/8] [========================98% ] report1.sqlite[2/8] [========================99% ] report1.sqlite[2/8] [========================100%] report1.sqlite[2/8] [========================100%] report1.sqlite
+SKIPPED: /home/ualmkc001/HW5_helper/report1.sqlite does not contain NV Tools Extension (NVTX) data.
+[3/8] Executing 'nvtxsum' stats report
+[4/8] Executing 'osrtsum' stats report
+
+Operating System Runtime API Statistics:
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)   Min (ns)  Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ----------  ----------  --------  ---------  -----------  ----------------------
+     66.8        534238932         17  31425819.5  15073177.0      1883  231524842   57682877.6  poll                  
+     28.6        228538386        628    363914.6     25177.5      1313   42557875    1854122.2  ioctl                 
+      2.3         18583323         41    453251.8      9027.0      2474   12830728    2052597.6  fopen                 
+      0.7          5609133         30    186971.1      2474.0      1163    3441885     714334.7  fclose                
+      0.3          2774981         36     77082.8     34104.5     15719    1056097     172913.1  mmap64                
+      0.3          2104299         14    150307.1     85736.0      1814     508276     163310.4  write                 
+      0.2          1669971          4    417492.8    416448.5    377219     459855      43757.4  pthread_create        
+      0.2          1497926         63     23776.6     19787.0      1323      66335      17701.9  open64                
+      0.2          1450474         55     26372.3      2825.0      1172     552048      92546.0  fcntl                 
+      0.1          1153078          4    288269.5     39454.0     15649    1058521     513644.4  fread                 
+      0.1           515399          2    257699.5    257699.5      2184     513215     361353.5  pthread_cond_broadcast
+      0.1           450006         16     28125.4     22732.5      2745      98245      23741.3  mmap                  
+      0.1           418177          6     69696.2      4819.0      1052     391407     157681.7  fwrite                
+      0.0           156174          1    156174.0    156174.0    156174     156174          0.0  pthread_cond_wait     
+      0.0            94658          4     23664.5      9462.5      7805      67928      29539.2  fgets                 
+      0.0            64201          7      9171.6      9708.0      1903      14127       4805.4  open                  
+      0.0            52159          2     26079.5     26079.5     20669      31490       7651.6  socket                
+      0.0            47230          4     11807.5      9989.5      3096      24155       9607.1  munmap                
+      0.0            38893          3     12964.3     12894.0      4639      21360       8360.7  pipe2                 
+      0.0            34636         13      2664.3      2144.0      1082       7344       1636.2  read                  
+      0.0            23464          1     23464.0     23464.0     23464      23464          0.0  connect               
+      0.0            10067          3      3355.7      2805.0      2564       4698       1168.7  fopen64               
+      0.0             7483          6      1247.2      1212.0      1022       1513        162.3  dup                   
+      0.0             6723          1      6723.0      6723.0      6723       6723          0.0  fflush                
+      0.0             4298          1      4298.0      4298.0      4298       4298          0.0  bind                  
+      0.0             2254          1      2254.0      2254.0      2254       2254          0.0  listen                
+
+[5/8] Executing 'cudaapisum' stats report
+
+CUDA API Statistics:
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)  Min (ns)  Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  -----------  --------  --------  ---------  -----------  ----------------------
+     94.9        309413275          3  103137758.3  195387.0    139212  309078676  178350068.6  cudaMalloc            
+      2.1          6920068          6    1153344.7  691901.5    486736    2453195     841152.6  cudaMemcpy            
+      1.8          5974681          5    1194936.2  384393.0    278154    3762388    1486824.2  cudaEventSynchronize  
+      0.9          2914798        505       5771.9    4529.0      4187     163227      10228.9  cudaLaunchKernel      
+      0.2           601821          3     200607.0  121879.0    108664     371278     147953.0  cudaFree              
+      0.1           167853          5      33570.6   31679.0     12102      50404      15929.1  cudaMemset            
+      0.0            49933         10       4993.3    3416.0      2645       9608       2622.1  cudaEventRecord       
+      0.0            30748          2      15374.0   15374.0      1002      29746      20325.1  cudaEventCreate       
+      0.0             4599          2       2299.5    2299.5       661       3938       2317.2  cudaEventDestroy      
+      0.0             2184          1       2184.0    2184.0      2184       2184          0.0  cuModuleGetLoadingMode
+
+[6/8] Executing 'gpukernsum' stats report
+
+CUDA Kernel Statistics:
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)                        Name                      
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  ------------------------------------------------
+     51.3          4105892        101   40652.4   37472.0     36544    222846      22701.3  transposeNaive(float *, const float *)          
+     21.9          1755284        101   17379.0   15872.0     15360    171775      15517.6  transposeCoalesced(float *, const float *)      
+      9.3           743644        101    7362.8    7296.0      7200      8896        210.5  copy(float *, const float *)                    
+      8.8           704061        101    6970.9    6976.0      6847      7232         64.6  copySharedMem(float *, const float *)           
+      8.7           693754        101    6868.9    6848.0      6752      7328         84.4  transposeNoBankConflicts(float *, const float *)
+
+[7/8] Executing 'gpumemtimesum' stats report
+
+CUDA Memory Operation Statistics (by time):
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)      Operation     
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ------------------
+     88.5          2931688      5  586337.6  495772.0    411325    914073     216195.6  [CUDA memcpy DtoH]
+     10.5           349213      1  349213.0  349213.0    349213    349213          0.0  [CUDA memcpy HtoD]
+      1.0            31808      5    6361.6    6272.0      6208      6656        195.2  [CUDA memset]     
+
+[8/8] Executing 'gpumemsizesum' stats report
+
+CUDA Memory Operation Statistics (by size):
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)      Operation     
+ ----------  -----  --------  --------  --------  --------  -----------  ------------------
+     20.972      5     4.194     4.194     4.194     4.194        0.000  [CUDA memcpy DtoH]
+     20.972      5     4.194     4.194     4.194     4.194        0.000  [CUDA memset]     
+      4.194      1     4.194     4.194     4.194     4.194        0.000  [CUDA memcpy HtoD]
+
+Generated:
+    /home/ualmkc001/HW5_helper/report1.nsys-rep
+    /home/ualmkc001/HW5_helper/report1.sqlite
